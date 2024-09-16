@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>HOLY TUBE</title>
+  <link rel="icon" href="play1.png" />
+
+</head>
+<body>
+  <header class="header">
+    <a href="#">
+      <img src="Holy.png" alt="HOLYTube Logo" class="youtube-logo" />
+    </a>
+    <form class="search-bar" style="border-radius: 25px;">
+      <input class="search-input" type="search" placeholder="Search" aria-label="Search" style="border-radius: 25px;" />
+      <button type="submit" class="search-btn" style="border-radius: 25px;">
+        <img src="magnify.svg" />
+      </button>
+    </form>
+    <div class="menu-icons">
+      <a href="#">
+        <img src="video-plus.svg" alt="Upload Video" />
+      </a>
+      <a href="#">
+        <img src="apps.svg" alt="Apps" />
+      </a>
+      <a href="#">
+        <img src="bell.svg" alt="Notifications" />
+      </a>
+      <a href="#">
+        <img class="menu-channel-icon" src="IMG_1114.PNG" alt="Your Channel" />
+      </a>
+    </div>
+  </header>
+  <div class="categories">
+    <section class="category-section">
+      <button class="category active">All</button>
+      <button class="category">Fire</button>
+      <button class="category">Music</button>
+      <button class="category">Word</button>
+      <!-- <button class="category">Category 4</button>
+      <button class="category">Category 5</button>
+      <button class="category">Category 6</button>
+      <button class="category">Category 7</button>
+      <button class="category">Category 8</button>
+      <button class="category">Category 9</button> -->
+    </section>
+  </div>
+  <div style="text-align: center;">
+      <video style="margin: 15px;" width="640" height="360" controls>
+            <source src="Mighty in Battle.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+          <video style="margin: 15px;" width="640" height="360" controls>
+            <source src="Tongues.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+          <video style="margin: 15px;" width="640" height="360" controls>
+            <source src="On Watch 1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+         
+
+  </div>
+    
+          
+        
+        
+       
+          
+  <body>
+
+    <a href="" style="color: inherit; "><div class="wrap" style="position: absolute; top: 200px; right: 100px; width: 400px; color: red;">
+        <div class="stepper vertical" data-start="000000000000">
+            <img src="img/arrow.svg" class="arrow top" alt="">
+            <div class="box">
+                <div class="numbers1 active">
+                    Page Visits: <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>1</span>
+                </div>
+                <div class="numbers2">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <img src="img/arrow.svg" class="arrow bottom" alt="">
+        </div></a>
+    
+        <div class="stepper horizontal" data-start="101">
+            
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the current counter value from localStorage or initialize it
+            let counter = parseInt(localStorage.getItem('pageCounter'), 10);
+            if (isNaN(counter)) {
+                counter = 0; // Initialize counter if not found
+            }
+            
+            // Increment the counter
+            counter++;
+            
+            // Store the updated counter value in localStorage
+            localStorage.setItem('pageCounter', counter);
+            
+            // Update the display
+            updateCounterDisplay(counter);
+        });
+        
+        function updateCounterDisplay(counter) {
+            
+            const stepper = document.querySelector('.stepper.vertical .numbers1');
+            
+            if (stepper) {
+                const digits = counter.toString().padStart(23, '0'); // Pad counter to ensure 12 digits
+                const spans = stepper.querySelectorAll('span');
+                
+                spans.forEach((span, index) => {
+                    span.textContent = digits[index] || '0';
+                });
+            }
+        }
+        </script>
+</body>
+</html>
